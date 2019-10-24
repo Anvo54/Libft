@@ -1,18 +1,23 @@
 #include <string.h>
+#include <stdio.h>
 
 void *ft_memccpy(void * dst, const void * src, int c, size_t n)
 {
-    unsigned char *cpy;
-    int i;
+	unsigned char *cpy;
+	unsigned char *src_copy;
+	int i;
 
-    *cpy = (unsigned char)dst;
-    i = 0;
-    while (i <= n && (unsigned char)src != c)
-    {
-        *cpy = (char)src;
-        src++;
-        cpy++;
-        i++;
-    }  
-    return (dst);
+	cpy = (unsigned char *)dst;
+	src_copy = (unsigned char *)src;
+
+	while (n)
+	{
+		*cpy = *src_copy;
+		cpy++;
+		if (*src_copy == c)
+			return (dst);
+		src_copy++;
+		n--;
+	}
+	return (dst);
 }

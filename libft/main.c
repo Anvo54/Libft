@@ -16,5 +16,6 @@ int main()
     ft_memccpy(str3, str, 'n', 8);
 
     printf("%s\n", str3);
-	return(0);
+
+;	return(0);
 }
