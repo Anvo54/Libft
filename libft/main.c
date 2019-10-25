@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memccpy(void * dst, const void * src, int c, size_t n);
-void *ft_memmove(void *dst, const void *src, size_t len);
+#include "libft.h"
 
 int main()
 {
@@ -28,12 +24,14 @@ int main()
 
     memmove(&e_mstr, &mstr, 25);
 
-    printf("%s\n", e_mstr);
-    printf("%s\n", mstr);
+    printf("memmove 25 result: %s\n", e_mstr);
+    printf("memmove source: %s\n", mstr);
+	
+	//memmove(&e_mstr, mstr, -3);
+    ft_memmove(&ft_e_mstr, &ft_mstr, -3);
 
-    ft_memmove(&ft_e_mstr, &ft_mstr, 25);
-
-    printf("%s\n", ft_e_mstr);
+	printf("memmove: %s", e_mstr);
+    printf("ft_memmove: %s\n", ft_e_mstr);
     printf("%s\n", ft_mstr);
 	return(0);
 }
