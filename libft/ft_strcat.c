@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 10:42:23 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/25 11:23:11 by avornane         ###   ########.fr       */
+/*   Created: 2019/10/22 16:12:37 by avornane          #+#    #+#             */
+/*   Updated: 2019/10/25 18:06:17 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	unsigned char	*cpy;
-	unsigned char	*src_copy;
-	int				i;
+	int i;
+	int j;
 
-	cpy = (unsigned char*)dst;
-	src_copy = (unsigned char*)src;
-	while (n)
+	i = 0;
+	while (s1[i] != '\0')
+		i++;
+	j = 0;
+	while (s2[j] != '\0')
 	{
-		*cpy = *src_copy;
-		cpy++;
-		if (*src_copy == c)
-			return (dst);
-		src_copy++;
-		n--;
+		s1[i + j] = s2[j];
+		j++;
 	}
-	return (dst);
+	s1[i + j] = '\0';
+	return (s1);
 }
