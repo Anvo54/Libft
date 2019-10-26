@@ -30,7 +30,7 @@ $(NAME) :
 clean:
 	/bin/rm -f $(OBJECTS)
 
-fclean: clean
+fclean:
 	/bin/rm -f $(NAME)
 
 re: fclean all
