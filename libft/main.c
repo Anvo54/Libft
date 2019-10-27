@@ -350,7 +350,7 @@ int main()
 	ret = strstr(haystack, needle);
 	ft_ret = ft_strstr(haystack, needle);
 	printf("strstr\nNeedle is: %s\n", ret);
-	printf("strstr\nNeedle is: %s\n", ft_ret);
+	printf("ft_strstr\nNeedle is: %s\n", ft_ret);
 
 	return(0);
 }

@@ -1,27 +1,29 @@
 #include "libft.h"
-#include <stdio.h>
 
-char *ft_strstr(const char *haystack, const char *needle)
+int search_needle(const char *haystack, const char *needle)
 {
-    while (*haystack)
+    while (*haystack && *needle)
     {
-        //printf("%c", *needle);
-        if(*haystack == *needle)
+        if (*haystack != *needle)
         {
-            printf("%c", *needle);
-            while (*haystack == *needle)
-            {
-                printf("%c", *needle);
-                if (*needle == '\0')
-                {
-                    return((char*)needle);
-                }
-                haystack++;
-                needle++;
-            }
+            return (0);
         }
         haystack++;
         needle++;
+    }
+    return (*needle == '\0');
+}
+
+char *ft_strstr(const char *haystack, const char *needle)
+{
+    while (*haystack != '\0')
+    {
+        if(*haystack == *needle)
+        if ((*haystack == *needle) && search_needle(haystack, needle))
+        {
+            return((char*)needle);
+        }
+        haystack++;
     }
     return(NULL);
 }
