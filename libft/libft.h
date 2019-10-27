@@ -23,6 +23,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strlcat(char *dst, const char *src, size_t dstsize);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
+char    *ft_strstr(const char *haystack, const char *needle);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 size_t	ft_strlen(char const *s);
 char	*ft_strdup(const char *s1);

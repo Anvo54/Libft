@@ -339,5 +339,18 @@ int main()
 		printf ("ft_strchr\n'y' found at position %ld.\n", ptr_strchr-strchr_str+1);
 	else
 		printf ("'y' not found.\n");
+
+	/**************** strstr ****************/
+
+	const char haystack[25] = "Needle from haystack";
+	const char needle[10] = "haystack";
+	char *ret;
+	char *ft_ret;
+
+	ret = strstr(haystack, needle);
+	ft_ret = ft_strstr(haystack, needle);
+	printf("strstr\nNeedle is: %s\n", ret);
+	printf("strstr\nNeedle is: %s\n", ft_ret);
+
 	return(0);
 }
