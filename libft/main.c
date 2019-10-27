@@ -307,5 +307,21 @@ int main()
 
 
 	/*************Testing strchr *************/
+
+	char strchr_str[50] = "Hello everyone!";
+
+	char *ptr_strchr;
+	ptr_strchr = (char*)strchr(strchr_str, 'y');
+	if (ptr_strchr!=NULL)
+		printf ("Original strchr\n'y' found at position %ld.\n", ptr_strchr-strchr_str+1);
+	else
+		printf ("'y' not found.\n");
+
+
+	ptr_strchr = (char*)ft_strchr(strchr_str, 'y');
+	if (ptr_strchr!=NULL)
+		printf ("ft_strchr\n'y' found at position %ld.\n", ptr_strchr-strchr_str+1);
+	else
+		printf ("'y' not found.\n");
 	return(0);
 }
