@@ -8,6 +8,8 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	i = 0;
 	while (s1[i] != '\0')
 		i++;
+	if (n < i)
+		return (NULL);
 	j = 0;
 	while (n && s2[j] != '\0')
 	{

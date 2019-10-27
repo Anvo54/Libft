@@ -273,28 +273,39 @@ int main()
 	printf("\n%s", ft_strcat_orig);
 
 	/**************** STRNCAT ********************************/
-
-	char strn_str_o[50] = "Let's twist";
-	char strn_str_o_2[50] = " again";
-
-	strncat(strn_str_o_2, strn_str_o, 3);
-	printf("\n\nOriginal strncat:\n\n%s\n", strn_str_o_2);
-
-
-	char ft_strn_str_o[50] = "Let's twist";
-	char ft_strn_str_o_2[50] = " again";
+	char ft_strn_str_o[12] = "Let's twist";
+	char ft_strn_str_o_2[8] = "again ";
 
 	ft_strncat(ft_strn_str_o_2, ft_strn_str_o, 3);
-	printf("\n\nOriginal strncat:\n\n%s\n", ft_strn_str_o_2);
+	printf("\n\nft_strncat:\n\n%s\n", ft_strn_str_o_2);
+
+	char strn_str_o[12] = "Let's twist";
+	char strn_str_o_2[8] = " again";
+
+	//strncat(strn_str_o_2, strn_str_o, 3);
+	//printf("\n\nOriginal strncat:\n\n%s\n", strn_str_o_2);
+
+
 
 	/**************** STRLCAT *******************************/
 
 	char strlcat_str[50] = "How does this work";
-	char strlcat_str_1[50] = " and this?";
+	char strlcat_str_1[11] = " and this?";
 
-	strlcat(strlcat_str, strlcat_str_1, 25);
+	strlcat(strlcat_str, strlcat_str_1, 29);
 
-	printf("%s\n",strlcat_str);
+	printf("strlcat:\n%s\n",strlcat_str);
 
+
+	char ft_strlcat_str[50] = "How does this work";
+	char ft_strlcat_str_1[11] = " and this?";
+
+
+	ft_strlcat(ft_strlcat_str, ft_strlcat_str_1, 29);
+
+	printf("ft_strlcat:\n%s\n",ft_strlcat_str);
+
+
+	/*************Testing strchr *************/
 	return(0);
 }
