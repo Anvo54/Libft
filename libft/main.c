@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <stdio.h>
 
 int main()
 {
@@ -276,17 +277,24 @@ int main()
 	char strn_str_o[50] = "Let's twist";
 	char strn_str_o_2[50] = " again";
 
-	strncat(strn_str_o_2, strn_str_o, 10);
+	strncat(strn_str_o_2, strn_str_o, 3);
 	printf("\n\nOriginal strncat:\n\n%s\n", strn_str_o_2);
 
-    printf("memmove 25 result: %s\n", e_mstr);
-    printf("memmove source: %s\n", mstr);
-	
-	//memmove(&e_mstr, mstr, -3);
-    ft_memmove(&ft_e_mstr, &ft_mstr, -3);
 
-	printf("memmove: %s", e_mstr);
-    printf("ft_memmove: %s\n", ft_e_mstr);
-    printf("%s\n", ft_mstr);
+	char ft_strn_str_o[50] = "Let's twist";
+	char ft_strn_str_o_2[50] = " again";
+
+	ft_strncat(ft_strn_str_o_2, ft_strn_str_o, 3);
+	printf("\n\nOriginal strncat:\n\n%s\n", ft_strn_str_o_2);
+
+	/**************** STRLCAT *******************************/
+
+	char strlcat_str[50] = "How does this work";
+	char strlcat_str_1[50] = " and this?";
+
+	strlcat(strlcat_str, strlcat_str_1, 25);
+
+	printf("%s\n",strlcat_str);
+
 	return(0);
 }
