@@ -358,8 +358,8 @@ int main()
 	char *strnret;
 	char *ft_strnret;
 
-	strnret = strnstr(haystack, needle, 18);
-	ft_strnret = ft_strstr(haystack, needle);
+	strnret = strnstr(haystack, needle, 19);
+	ft_strnret = ft_strnstr(haystack, needle, 19);
 	printf("strNstr\nNeedle is: %s\n", strnret);
 	printf("ft_strstr\nNeedle is: %s\n", ft_strnret);
 	return(0);
