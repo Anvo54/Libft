@@ -352,5 +352,15 @@ int main()
 	printf("strstr\nNeedle is: %s\n", ret);
 	printf("ft_strstr\nNeedle is: %s\n", ft_ret);
 
+
+	/**************** strnstr ****************/
+
+	char *strnret;
+	char *ft_strnret;
+
+	strnret = strnstr(haystack, needle, 18);
+	ft_strnret = ft_strstr(haystack, needle);
+	printf("strNstr\nNeedle is: %s\n", strnret);
+	printf("ft_strstr\nNeedle is: %s\n", ft_strnret);
 	return(0);
 }
