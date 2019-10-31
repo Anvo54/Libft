@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 11:05:17 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/25 11:46:20 by avornane         ###   ########.fr       */
+/*   Created: 2019/10/31 14:08:32 by avornane          #+#    #+#             */
+/*   Updated: 2019/10/31 14:13:27 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char		*ft_strtrim(char const *s)
 {
-	unsigned char temp[len];
+	int		start;
+	int		total;
+	char	*fresh;
 
-	ft_memcpy(temp, src, len);
-	ft_memcpy(dst, temp, len);
-	return (dst);
+	start = 0;
+	total = ft_strlen(s) - 1;
+	if (s == NULL)
+		return (NULL);
+	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
+		start++;
+	while (s[total] == ' ' || s[total] == '\n' || s[total] == '\t')
+		total--;
+	fresh = ft_strsub(s, start, (total - start) + 1);
+	if (fresh == NULL)
+		return (NULL);
+	return (fresh);
 }

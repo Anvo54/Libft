@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 11:05:17 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/25 11:46:20 by avornane         ###   ########.fr       */
+/*   Created: 2019/10/28 16:50:30 by avornane          #+#    #+#             */
+/*   Updated: 2019/10/28 16:57:37 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_isprint(int c)
 {
-	unsigned char temp[len];
-
-	ft_memcpy(temp, src, len);
-	ft_memcpy(dst, temp, len);
-	return (dst);
+	return (c >= 32 && c <= 126);
 }

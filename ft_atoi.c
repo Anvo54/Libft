@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 11:05:17 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/25 11:46:20 by avornane         ###   ########.fr       */
+/*   Created: 2019/10/28 14:18:08 by avornane          #+#    #+#             */
+/*   Updated: 2019/10/28 14:54:49 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_atoi(char *str)
 {
-	unsigned char temp[len];
+	int result;
+	int i;
+	int neg;
 
-	ft_memcpy(temp, src, len);
-	ft_memcpy(dst, temp, len);
-	return (dst);
+	neg = 1;
+	i = 0;
+	result = 0;
+	while (str[i] == '-')
+	{
+		neg = -1;
+		i++;
+	}
+	while (str[i] < 48 && str)
+	{
+		i++;
+	}
+	while (str[i] != '\0' && str[i] >= 48 && str[i] <= 57)
+	{
+		result = result * 10 + str[i] - '0';
+		i++;
+	}
+	result = result * neg;
+	return (result);
 }
