@@ -688,9 +688,9 @@ int main()
 
 	printf("\n%s\n",fresh_trimstr);
 
-	char **afsad = ft_strsplit("Hello****Everybody***My name is***Gekko***nen", '*');
-
-	//printf("%s", afsad[0]);
+	char **string_array = ft_strsplit("Hello****Everybody***My name is***Gekko***nen*****", '*');
+	
+	printf("%s", string_array[1]);
 
 	return(0);
 }

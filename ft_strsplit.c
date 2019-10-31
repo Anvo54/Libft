@@ -49,7 +49,6 @@ char *add_word(char const *s, char c, int *j)
 	len = ft_strlen(s);
 	while (*j < len)
 	{
-		printf("We are here %i time", *j);
 		if(s[*j] != c && *j < len)
 		{
 			start = *j;
@@ -58,13 +57,14 @@ char *add_word(char const *s, char c, int *j)
 				s_size++;
 				(*j)++;
 			}
-		}
 		str = ft_strsub(s, start, s_size);
-			if(str != NULL)
-				return(str);
+		(*j)++;
+		if(str != NULL)
+			return(str);
+		}
 		(*j)++;
 	}
-	return (NULL);
+	return (str);
 }
 
 char **ft_strsplit(char const *s, char c)
@@ -81,13 +81,8 @@ char **ft_strsplit(char const *s, char c)
 	fresh = malloc(sizeof(fresh) * words);
 	while (i <= words)
 	{
-		*fresh = add_word(s, c, &j);
-		printf("%i", j);
-		printf("%s\n", *fresh);
-		fresh++;
+		fresh[i] = add_word(s, c, &j);
 		i++;
 	}
-	
-	printf("\nWords: %i\n", words);
 	return (fresh);
 }
