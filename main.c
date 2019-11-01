@@ -692,5 +692,9 @@ int main()
 	
 	printf("%s", string_array[1]);
 
+	char *tsf = ft_itoa(9154264);
+	char *asd = ft_itoa(-9154264);
+	printf("\n%s\n", asd);
+	printf("\n%s\n", tsf);
 	return(0);
 }
