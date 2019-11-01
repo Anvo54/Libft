@@ -125,7 +125,6 @@ int main()
 	char ft_deststr[50];
 
 
-
 	memcpy(deststr, &strcpy, 5);
 	printf("memcpy, 5 characters\n\n");
 	printf("%s\n\n\n", deststr);
@@ -203,6 +202,8 @@ int main()
 
 	i = 0;
 	printf("\n\n");
+
+
 
 	/***Test of memmove********/
 
@@ -299,25 +300,13 @@ int main()
 
 	printf("\n%s", ft_strcat_orig);
 
-	/**************** STRNCAT ********************************/
-	char ft_strn_str_o[12] = "Let's twist";
-	char ft_strn_str_o_2[8] = "again ";
-
-	ft_strncat(ft_strn_str_o_2, ft_strn_str_o, 3);
-	printf("\n\nft_strncat:\n\n%s\n", ft_strn_str_o_2);
-
-	char strn_str_o[12] = "Let's twist";
-	char strn_str_o_2[8] = " again";
-
-	//strncat(strn_str_o_2, strn_str_o, 3);
-	//printf("\n\nOriginal strncat:\n\n%s\n", strn_str_o_2);
-
 
 
 	/**************** STRLCAT *******************************/
 
 	char strlcat_str[50] = "How does this work";
 	char strlcat_str_1[11] = " and this?";
+	char ploks[50];
 
 	strlcat(strlcat_str, strlcat_str_1, 29);
 
@@ -330,6 +319,7 @@ int main()
 
 	ft_strlcat(ft_strlcat_str, ft_strlcat_str_1, 29);
 
+	printf("%s", ploks);
 	printf("ft_strlcat:\n%s\n",ft_strlcat_str);
 
 
@@ -696,5 +686,30 @@ int main()
 	char *asd = ft_itoa(-9154264);
 	printf("\n%s\n", asd);
 	printf("\n%s\n", tsf);
+
+	/*********memccpy******************/
+	char testccpy[50] = "-zyxwvutsjjjjjjjjjjjjjjjjjjjjj";
+	char testccpy_dst[50];
+
+	ft_memccpy(testccpy_dst, testccpy, 's', 25);
+	//printf("%s", testccpy_dst);
+	//memccpy(testccpy_dst, testccpy, 's', 25);
+	printf("%s", testccpy_dst);
+
+	/**************** STRNCAT ********************************/
+	char ft_strn_str_o[50] = "Let's twist";
+	char ft_strn_str_o_2[50] = "again ";
+
+	ft_strncat(ft_strn_str_o_2, ft_strn_str_o, 2);
+	printf("\n\nft_strncat:\n\n%s\n", ft_strn_str_o_2);
+
+	char strn_str_o[50] = "Let's twist";
+	char strn_str_o_2[50] = "again ";
+
+	strncat(strn_str_o_2, strn_str_o, 2);
+	printf("\n\nOriginal strncat:\n\n%s\n", strn_str_o_2);
+
+	printf("%zu", ft_strlcat(ft_strn_str_o, ft_strn_str_o_2, 100));
+	printf("%zu", strlcat(ft_strn_str_o, ft_strn_str_o_2, 100));
 	return(0);
 }

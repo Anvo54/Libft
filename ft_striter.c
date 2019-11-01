@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 16:13:55 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/30 11:54:15 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/01 11:42:53 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_striter(char *s, void (*f)(char *))
 {
 	if (s == NULL || *f == NULL)
-		return;
+		return ;
 	while (*s)
 	{
 		f(s);

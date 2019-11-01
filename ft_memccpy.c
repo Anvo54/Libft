@@ -16,17 +16,17 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*cpy;
 	unsigned char	*src_copy;
+	size_t			i;
 
 	cpy = (unsigned char*)dst;
 	src_copy = (unsigned char*)src;
-	while (n)
+	i = 0;
+	while (i < n)
 	{
-		*cpy = *src_copy;
-		cpy++;
-		if (*src_copy == c)
-			return (dst);
-		src_copy++;
-		n--;
+		cpy[i] = src_copy[i];
+		if (src_copy[i] == (unsigned char)c)
+			return ((void*)dst + i + 1);
+		i++;
 	}
-	return (dst);
+	return (NULL);
 }

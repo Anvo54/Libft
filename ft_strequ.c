@@ -6,11 +6,11 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 16:52:32 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/30 16:58:46 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/01 11:43:47 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strequ(char const *s1, char const *s2)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	while (*s1 && *s2)
 	{
