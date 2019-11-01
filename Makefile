@@ -22,7 +22,7 @@ SRC =	ft_memset.c ft_strcat.c ft_strcpy.c ft_strdup.c ft_strlen.c \
 		ft_putendl.c ft_putendl_fd.c ft_strclr.c ft_memalloc.c ft_strnew.c \
 		ft_memdel.c ft_striter.c ft_strdel.c ft_striteri.c ft_strmap.c \
 		ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
-		ft_strtrim.c ft_strsplit.c
+		ft_strtrim.c ft_strsplit.c ft_itoa.c
 
 OBJECTS = ${SRC:.c=.o}
 
