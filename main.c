@@ -580,7 +580,7 @@ int main()
 
 	printf("%s\n", striteri_str);
 
-	/****************** ft_strdel *******************/
+	/****************** ft_strdel *******************
 
 	char *str_des;
 
@@ -593,7 +593,7 @@ int main()
 
 	printf("\n");
 
-	/****************** ft_strmap ******************/
+	****************** ft_strmap ******************/
 
 	char *old_string = "Old string";
 	char *fresh_string;
@@ -697,19 +697,51 @@ int main()
 	printf("%s", testccpy_dst);
 
 	/**************** STRNCAT ********************************/
-	char ft_strn_str_o[50] = "Let's twist";
-	char ft_strn_str_o_2[50] = "again ";
+	char ft_strn_str_o[50] = "ABCDEF";
+	char ft_strn_str_o_2[50] = "GHIJKL";
 
 	ft_strncat(ft_strn_str_o_2, ft_strn_str_o, 2);
 	printf("\n\nft_strncat:\n\n%s\n", ft_strn_str_o_2);
 
-	char strn_str_o[50] = "Let's twist";
-	char strn_str_o_2[50] = "again ";
+	char strn_str_o[50] = "ABCDEF";
+	char strn_str_o_2[50] = "GHIJKL";
 
 	strncat(strn_str_o_2, strn_str_o, 2);
 	printf("\n\nOriginal strncat:\n\n%s\n", strn_str_o_2);
 
-	printf("%zu", ft_strlcat(ft_strn_str_o, ft_strn_str_o_2, 100));
-	printf("%zu", strlcat(ft_strn_str_o, ft_strn_str_o_2, 100));
+	printf("\n%zu", ft_strlcat(ft_strn_str_o, ft_strn_str_o_2, 25));
+	printf("\n%zu", strlcat(ft_strn_str_o, ft_strn_str_o_2, 25));
+	
+	char *str_des;
+
+	str_des = malloc(20);
+
+	//printf("%p\n",str_des);
+	ft_strdel(&str_des);
+
+	//printf("%p\n",str_des);
+
+	printf("\n");
+
+	char	*destroy;
+	char	*tronmsasd;
+	if (!(destroy = (char *)malloc(sizeof(*destroy) * 15)))
+		return (0);
+	memset(destroy, 0, 15);
+	memset(destroy, 'r', 6);
+	destroy[11] = 'a';
+	printf("%zu",ft_strlcat(destroy, "lorem", 15));
+	write(1, "\n", 1);
+	write(1, destroy, 15);
+
+	if (!(tronmsasd = (char *)malloc(sizeof(*tronmsasd) * 15)))
+	return (0);
+	memset(tronmsasd, 0, 15);
+	memset(tronmsasd, 'r', 6);
+	tronmsasd[11] = 'a';
+	printf("%zu", strlcat(tronmsasd, "lorem", 15));
+	write(1, "\n", 1);
+	write(1, tronmsasd, 15);
+
 	return(0);
 }
