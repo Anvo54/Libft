@@ -27,9 +27,7 @@ int					get_word_count(char const *s, char c)
 		{
 			result++;
 			while (s[i] != c && i < len)
-			{
 				i++;
-			}
 		}
 		i++;
 	}
@@ -76,11 +74,12 @@ char				**ft_strsplit(char const *s, char c)
 	j = 0;
 	len = ft_strlen(s);
 	words = get_word_count(s, c);
-	fresh = malloc(sizeof(fresh) * words);
-	while (i <= words)
+	fresh = malloc(sizeof(fresh) * words + 1);
+	while (i < words)
 	{
 		fresh[i] = add_word(s, c, &j, len);
 		i++;
 	}
+	fresh[i] = NULL;
 	return (fresh);
 }

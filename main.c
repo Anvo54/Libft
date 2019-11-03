@@ -27,6 +27,16 @@ char	testmapi(unsigned int i, char c)
 	return (c);
 }
 
+void	ft_print_result(char const *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
+
 
 int main()
 {
@@ -774,5 +784,34 @@ int main()
 	printf("\nft: \t\n\r\v\f  469 \n%i",ft_atoi("\t\n\r\v\f  469 \n"));
 	printf("\natoi: \t\n\r\v\f  469 \n%i",atoi("\t\n\r\v\f  469 \n"));
 
+	printf("\n%s", ft_itoa(-2147483648LL));
+
+
+	char *results =  "      asdf       qwerty        zxcv";
+  char **temppi = ft_strsplit("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+
+  
+  int iter = 0;
+  while (iter<12)
+  {
+    printf("%s\n", temppi[iter]);
+    iter++;
+  }
+
+  	char	**tabstr;
+	int		arg;
+	iter = 0;
+
+  	if (!(tabstr = ft_strsplit("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ')))
+			ft_print_result("NULL");
+		else
+		{
+			while (tabstr[iter] != '\0')
+			{
+				ft_print_result(tabstr[iter]);
+				write(1, "\n", 1);
+				iter++;
+			}
+		}
 	return(0);
 }
