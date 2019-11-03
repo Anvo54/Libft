@@ -30,12 +30,25 @@ int			numlen(int n)
 	return (i);
 }
 
+char *add_to_array(char *str, int *i, int n)
+{
+	while (n > 0)
+	{
+		str[*i] = '0' + (n % 10);
+		n = n / 10;
+		(*i)--;
+	}
+	return (str);
+}
+
 char		*ft_itoa(int n)
 {
 	int		i;
 	char	*str;
 
 	i = numlen(n);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	str = (char*)malloc(sizeof(str) * (i + 1));
 	if (str == NULL)
 		return (NULL);
@@ -50,11 +63,5 @@ char		*ft_itoa(int n)
 		str[0] = '-';
 		n = n * -1;
 	}
-	while (n > 0)
-	{
-		str[i] = '0' + (n % 10);
-		n = n / 10;
-		i--;
-	}
-	return (str);
+	return (add_to_array(str, &i, n));
 }
