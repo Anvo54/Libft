@@ -762,5 +762,17 @@ int main()
 	printf("%i\n",ft_strncmp("abcdefgh", "abcdwxyz", 4));
 	printf("%i\n",strncmp("abcdefgh", "abcdwxyz", 4));
 
+	printf("%i\n",atoi(""));
+	printf("%i\n",ft_atoi(""));
+
+	printf("\n%i\n",ft_atoi("+-54"));
+	printf("\n%i\n",atoi("+-54"));
+
+	printf("\nft: -+54\n%i",ft_atoi("-+54"));
+	printf("\natoi: -+54\n%i",atoi("-+54"));
+
+	printf("\nft: \t\n\r\v\f  469 \n%i",ft_atoi("\t\n\r\v\f  469 \n"));
+	printf("\natoi: \t\n\r\v\f  469 \n%i",atoi("\t\n\r\v\f  469 \n"));
+
 	return(0);
 }
