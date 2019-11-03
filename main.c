@@ -744,7 +744,14 @@ int main()
 	write(1, tronmsasd, 15);
 
 	printf("\n\nstrchr\n\n");
-	
+
+
+	printf("%i\n",ft_strcmp("test\200", "test\0"));
+	printf("%i\n",strcmp("test\200", "test\0"));
+
+
+	printf("%i\n",ft_strcmp("Antti", "Antti"));
+	printf("%i\n",strcmp("Antti", "Antti"));
 
 	return(0);
 }
