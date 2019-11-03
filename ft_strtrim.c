@@ -23,7 +23,11 @@ char		*ft_strtrim(char const *s)
 	if (s == NULL)
 		return (NULL);
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
+	{
+		if (s[start + 1] == '\0')
+			return (fresh = ft_strnew(0));
 		start++;
+	}
 	while (s[total] == ' ' || s[total] == '\n' || s[total] == '\t')
 		total--;
 	fresh = ft_strsub(s, start, (total - start) + 1);
