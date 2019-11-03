@@ -753,5 +753,14 @@ int main()
 	printf("%i\n",ft_strcmp("Antti", "Antti"));
 	printf("%i\n",strcmp("Antti", "Antti"));
 
+	printf("%i\n",ft_strncmp("abcdefgh", "", 0));
+	printf("%i\n",strncmp("abcdefgh", "", 0));
+
+	printf("%i\n",ft_strncmp("abcdefghij", "abcdefgxyz", 3));
+	printf("%i\n",strncmp("abcdefghij", "abcdefgxyz", 3));
+
+	printf("%i\n",ft_strncmp("abcdefgh", "abcdwxyz", 4));
+	printf("%i\n",strncmp("abcdefgh", "abcdwxyz", 4));
+
 	return(0);
 }
