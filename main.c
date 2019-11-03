@@ -743,5 +743,8 @@ int main()
 	write(1, "\n", 1);
 	write(1, tronmsasd, 15);
 
+	printf("\n\nstrchr\n\n");
+	
+
 	return(0);
 }
