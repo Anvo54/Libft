@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 17:00:58 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/04 11:39:21 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 15:08:22 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			*content_size;
+	struct s_list	*next;
+}					t_list;
 
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
