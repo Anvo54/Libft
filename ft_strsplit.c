@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 15:15:00 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/31 15:22:14 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 12:50:14 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,12 @@ char				**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	words = get_word_count(s, c);
-	fresh = malloc(sizeof(fresh) * words + 1);
+	if (!(fresh = malloc(sizeof(fresh) * words + 1)))
+		return (NULL);
 	while (i < words)
 	{
 		fresh[i] = add_word(s, c, &j, len);

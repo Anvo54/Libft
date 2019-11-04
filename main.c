@@ -813,5 +813,8 @@ int main()
 				iter++;
 			}
 		}
+	if(ft_memcpy(((void *)0), ((void *)0), 3) == NULL)
+		printf("NULL");
+		
 	return(0);
 }

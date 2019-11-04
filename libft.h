@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 17:00:58 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/01 11:35:36 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 11:39:21 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	*ft_itoa(int n);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 size_t	ft_strlen(char const *s);
-size_t  ft_strnlen(const char *s, size_t maxlen);
+size_t	ft_strnlen(const char *s, size_t maxlen);
 char	*ft_strdup(const char *s1);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);

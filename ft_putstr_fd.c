@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 12:20:52 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/01 11:42:29 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 12:15:06 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);

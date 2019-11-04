@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 15:02:54 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/25 16:22:21 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 11:45:03 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *s1)
 	while (s1[i] != '\0')
 		i++;
 	dup = (char*)malloc(sizeof(*dup) * (i + 1));
+	if (dup == NULL)
+		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
 	{

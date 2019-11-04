@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 12:09:42 by avornane          #+#    #+#             */
-/*   Updated: 2019/10/31 12:27:08 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 12:21:45 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	total = (ft_strlen(s1) + ft_strlen(s2)) + 2;
 	fresh = ft_strnew(total);
+	if (!s1 || !s2)
+		return (NULL);
 	if (fresh == NULL)
 	{
 		return (NULL);

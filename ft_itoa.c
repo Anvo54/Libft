@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 11:36:11 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/01 11:41:46 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 11:31:48 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int			numlen(int n)
 	return (i);
 }
 
-char *add_to_array(char *str, int *i, int n)
+char		*add_to_array(char *str, int *i, int n)
 {
 	while (n > 0)
 	{
@@ -49,8 +49,7 @@ char		*ft_itoa(int n)
 	i = numlen(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	str = (char*)malloc(sizeof(str) * (i + 1));
-	if (str == NULL)
+	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	str[i--] = '\0';
 	if (n == 0)
