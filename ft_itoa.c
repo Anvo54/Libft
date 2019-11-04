@@ -49,7 +49,7 @@ char		*ft_itoa(int n)
 	i = numlen(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+	if (!(str = (char*)malloc(sizeof(*str) * (i + 1))))
 		return (NULL);
 	str[i--] = '\0';
 	if (n == 0)
