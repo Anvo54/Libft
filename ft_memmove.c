@@ -22,9 +22,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (str1 > str2)
 	{
 		while(len--)
-		{
 			str1[len] = str2[len];
-		}
 	}
 	else
 		ft_memcpy(str1,str2,len);
