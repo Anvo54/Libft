@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 17:00:58 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/04 15:08:22 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/04 16:26:53 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strtrim(char const *s);
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: avornane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/22 15:27:04 by avornane          #+#    #+#              #
-#    Updated: 2019/10/31 12:16:07 by avornane         ###   ########.fr        #
+#    Updated: 2019/11/04 16:28:24 by avornane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,13 +22,13 @@ SRC =	ft_memset.c ft_strcat.c ft_strcpy.c ft_strdup.c ft_strlen.c \
 		ft_putendl.c ft_putendl_fd.c ft_strclr.c ft_memalloc.c ft_strnew.c \
 		ft_memdel.c ft_striter.c ft_strdel.c ft_striteri.c ft_strmap.c \
 		ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
-		ft_strtrim.c ft_strsplit.c ft_itoa.c ft_strnlen.c
+		ft_strtrim.c ft_strsplit.c ft_itoa.c ft_strnlen.c ft_lstnew.c
 
 OBJECTS = ${SRC:.c=.o}
 
 HEADERS = ./
 
-all: $(NAME)
+all:	$(NAME)
 
 $(NAME) :
 	gcc -Wall -Werror -Wextra -I $(HEADERS) -c $(SRC)

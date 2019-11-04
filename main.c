@@ -104,7 +104,7 @@ int main()
             printf("'\\0\' ");
         } else
         {
-            printf("%c", ft_bzstr[i]);
+				printf("%c", ft_bzstr[i]);
         }
         i++;
     }
@@ -815,6 +815,14 @@ int main()
 		}
 	if(ft_memcpy(((void *)0), ((void *)0), 3) == NULL)
 		printf("NULL");
-		
+	
+	t_list *lst;
+	lst = NULL;
+	
+	char sata[50] = "laldkkfipauhpgituha";
+	
+	
+	lst = ft_lstnew(sata, ft_strlen(sata));
+
 	return(0);
 }
