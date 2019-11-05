@@ -6,16 +6,16 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 12:37:42 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/04 11:37:54 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:17:48 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		search_needle_len(const char *haystack, const char *needle, int i, \
-size_t len)
+static int		search_needle_len(const char *haystack, const char *needle, \
+				int i, size_t len)
 {
-	int j;
+	int			j;
 
 	j = 0;
 	while (haystack[i] != '\0' && haystack[i] == needle[j] && len)
@@ -29,9 +29,10 @@ size_t len)
 	return (0);
 }
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char			*ft_strnstr(const char *haystack, const char *needle,\
+				size_t len)
 {
-	int i;
+	int			i;
 
 	i = 0;
 	if (needle[0] == '\0')

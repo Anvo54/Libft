@@ -6,13 +6,13 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 11:36:11 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/04 11:31:48 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:13:34 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			numlen(int n)
+static int	numlen(int n)
 {
 	int		i;
 
@@ -30,7 +30,7 @@ int			numlen(int n)
 	return (i);
 }
 
-char		*add_to_array(char *str, int *i, int n)
+static char	*add_to_array(char *str, int *i, int n)
 {
 	while (n > 0)
 	{

@@ -6,15 +6,15 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 12:46:38 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/04 11:38:47 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:14:41 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		search_needle(const char *haystack, const char *needle, int i)
+static int		search_needle(const char *haystack, const char *needle, int i)
 {
-	int j;
+	int			j;
 
 	j = 0;
 	while (haystack[i] != '\0' && haystack[i] == needle[j])
@@ -27,9 +27,9 @@ int		search_needle(const char *haystack, const char *needle, int i)
 	return (0);
 }
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char			*ft_strstr(const char *haystack, const char *needle)
 {
-	int i;
+	int			i;
 
 	i = 0;
 	if (needle[0] == '\0')

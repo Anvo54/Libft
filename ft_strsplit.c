@@ -6,13 +6,13 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 15:15:00 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/04 12:50:14 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:16:01 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					get_word_count(char const *s, char c)
+static int			get_word_count(char const *s, char c)
 {
 	int				result;
 	int				i;
@@ -34,7 +34,7 @@ int					get_word_count(char const *s, char c)
 	return (result);
 }
 
-char				*add_word(char const *s, char c, int *j, int len)
+static char			*add_word(char const *s, char c, int *j, int len)
 {
 	size_t			s_size;
 	unsigned int	start;
