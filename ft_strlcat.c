@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 12:34:15 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/04 11:37:06 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/08 17:39:50 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 		j++;
 	}
-	dst[i] = '\0';
+	if (dstsize < 1)
+		dst[i + 1] = '\0';
+	else
+		dst[i] = '\0';
 	return (result);
 }

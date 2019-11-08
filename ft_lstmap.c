@@ -6,15 +6,15 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:49:25 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/06 12:49:27 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/08 10:30:59 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list		*fresh; 
+	t_list		*fresh;
 	t_list		*list;
 
 	if (!lst || !f)

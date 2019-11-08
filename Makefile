@@ -6,7 +6,7 @@
 #    By: avornane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/22 15:27:04 by avornane          #+#    #+#              #
-#    Updated: 2019/11/04 16:28:24 by avornane         ###   ########.fr        #
+#    Updated: 2019/11/08 17:40:51 by avornane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ $(NAME) :
 clean:
 	/bin/rm -f $(OBJECTS)
 
-fclean:
+fclean:	clean
 	/bin/rm -f $(NAME)
 
 re: fclean all

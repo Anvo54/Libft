@@ -6,7 +6,7 @@
 /*   By: avornane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:49:25 by avornane          #+#    #+#             */
-/*   Updated: 2019/11/06 12:49:27 by avornane         ###   ########.fr       */
+/*   Updated: 2019/11/08 10:31:33 by avornane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	while(lst && f)
+	while (lst && f)
 	{
 		f(lst);
 		lst = lst->next;
